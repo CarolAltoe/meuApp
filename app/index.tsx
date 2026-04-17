@@ -1,15 +1,14 @@
-import { Text, View } from "react-native";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { AboutScreen } from '../src/screens/AboutScreen';
+import { HomeScreen } from '../src/screens/HomeScreen';
+
+const Stack = createNativeStackNavigator();
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>HELLO WORLD!</Text>
-    </View>
+    <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="About" component={AboutScreen} />
+    </Stack.Navigator>
   );
 }
