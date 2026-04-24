@@ -1,16 +1,18 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { AboutScreen } from '../src/screens/AboutScreen';
-import { DetailScreen } from '../src/screens/DetailScreen';
+import { ContactScreen } from '../src/screens/ContactScreen';
 import { HomeScreen } from '../src/screens/HomeScreen';
+import { ProfileScreen } from '../src/screens/ProfileScreen';
 
-const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function Index() {
   return (
-    <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="About" component={AboutScreen} />
-        <Stack.Screen name="Detail" component={DetailScreen}/>
-    </Stack.Navigator>
+    <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="About" component={AboutScreen} />
+        <Tab.Screen name="Contact" component={ContactScreen}/>
+        <Tab.Screen name="Profile" component={ProfileScreen}/>
+    </Tab.Navigator>
   );
 }
