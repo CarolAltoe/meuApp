@@ -41,4 +41,9 @@ export const styles = StyleSheet.create({
   descricao: {
     fontSize: 12,
   },
+  pizzaItem:{
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  }
 });
